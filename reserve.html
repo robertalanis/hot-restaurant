@@ -18,7 +18,7 @@
             <hr>
             <h2 class="text-center">Make your reservation</h2>
             <div class="text-center">
-                <a href="/"><button class="btn btn-primary">View Tables</button></a>
+                <a href="/api/tables"><button class="btn btn-primary">View Tables</button></a>
                 <a href="/"><button class="btn">Home</button></a>
             </div>
         </div>
@@ -73,6 +73,11 @@
             $("#email").val("");
             $("#uniqueID").val("");
             console.log("please let me commit to git what the hell");
+
+            $.post("/api/tables", reservation)
+            .then(function(data) {
+                console.log("reserve.html", data);
+            });
         })
     </script>
 
