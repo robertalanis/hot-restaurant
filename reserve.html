@@ -58,5 +58,23 @@
         <a href="/api/tables">API Table Link</a> | <a href="/api/waitlist">API Waitlist</a> 
     </div>
 
+    <script type="text/javascript">
+        $("#submit-btn").on("click", function() {
+            event.preventDefault();
+            var reservation = {
+                name: $("#name").val().trim(),
+                number: $("#number").val().trim(),
+                email: $("#email").val().trim(),
+                uniqueID: $("#uniqueID").val().trim()
+            };
+            console.log(reservation);
+            $("#name").val("");
+            $("#number").val("");
+            $("#email").val("");
+            $("#uniqueID").val("");
+            console.log("please let me commit to git what the hell");
+        })
+    </script>
+
 </body>
 </html>
