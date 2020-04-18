@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hot Restaurant</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h2 class="panel-title">Current Reservations</h2>
+                </div>
+                <div class="panel-body" id="namesReserved">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h2 class="panel-title">Waiting List</h2>
+                    </div>
+                    <div class="panel-body" id="namesWaiting">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+            $("#submit1-btn").on("click", function() {
+                event.preventDefault();
+                var tableRes = {
+                    name: $("#namesReserved").val().trim()
+                };
+                var tableWai = {
+                    name: $("#namesWaiting").val().trim()
+                }
+                console.log(table);
+                $("#namesReserved").val("");
+                $("#nameWaiting").val("");
+            })
+        </script>
+</body>
+</html>
